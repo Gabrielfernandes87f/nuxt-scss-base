@@ -1,8 +1,21 @@
-$text-color: #7159c1;
 
-body{
-    h1 {
-        background-color: #f011;
-        color: $text-color;
+@mixin toglleDarck ($dark){
+    @if $dark == true {
+        color: #fff;
+        background-color: #000;
+        }
+        @else {
+            color: #000;
+            background-color: #fff;
+        }
     }
+
+* {
+    @include toglleDarck(true)
+}
+
+.linkscss {
+    text-decoration: none;
+    color: red;
+
 }
